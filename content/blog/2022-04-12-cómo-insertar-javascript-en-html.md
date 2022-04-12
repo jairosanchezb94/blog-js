@@ -58,3 +58,50 @@ En este momento, el código anterior no contiene JavaScript y, por lo tanto, no 
 var time = new Date();
 console.log(time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds());
 ```
+
+Envolveremos este código con las etiquetas **<script>** y **</script>** y lo colocaremos en la cabecera (head) del código HTML para garantizar que cada vez que se cargue la página, se genere una alerta que muestre la hora actual al usuario. Así es como se verá el archivo HTML después de agregar el código:
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time right now is: </title>
+<script>
+var time = new Date();
+console.log(time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds());
+</script>
+</head>
+<body>
+</body>
+</html>
+```
+
+Si quieres mostrar la hora dentro del cuerpo (body) de la página, deberás incluir la script dentro de las etiquetas <body> de la página HTML. Así es como se verá el código cuando lo hagas:
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time right now is: </title>
+</head>
+<body>
+<script>
+let d = new Date();
+document.body.innerHTML = "<h1>Time right now is:  " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds()
+"</h1>"
+</script>
+</body>
+</html>
+```
+
+Así es como se vería el resultado final:
+
+<https://www.hostinger.es/tutoriales/wp-content/uploads/sites/7/2018/04/insertar-javascript-en-html-1.png>
+
+![ejemplo](/assets/images/insertar-javascript-en-html-1.png "ejemplo")
+
+[](https://www.hostinger.es/tutoriales/wp-content/uploads/sites/7/2018/04/insertar-javascript-en-html-1.png)
