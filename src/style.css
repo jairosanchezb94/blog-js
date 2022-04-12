@@ -55,10 +55,10 @@
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
   --color-primary: #3b69a5;
-  --color-text: #d9d9d9;
-  --color-text-light: #7e7e7e;
+  --color-text: #ffffff;
+  --color-text-light: #d9d9d0;
   --color-heading: #e6e6e6;
-  --color-heading-black: rgb(206, 206, 206);
+  --color-heading-black: rgb(226, 225, 225);
   --color-accent: #0e0029e5;
 }
 
@@ -72,6 +72,7 @@
 
 html {
   background: #1b014de5;
+  background-image: url(../src/images/black-orchid.png);
   line-height: var(--lineHeight-normal);
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
