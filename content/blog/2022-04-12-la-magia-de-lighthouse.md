@@ -26,7 +26,7 @@ Para lanzar la herramienta, no hay más que acceder al sitio web que queramos an
 
 <!--EndFragment-->
 
-![ejemplo](/src/images/pic1.png)
+![ejemplo](/src/images/pic1.jpg)
 
 <!--StartFragment-->
 
@@ -36,7 +36,7 @@ Tras pulsar en *Perform an audit…*, podemos elegir entre las categorías que 
 
 <!--EndFragment-->
 
-![ejemplo](/src/images/pic2.png)
+![ejemplo](/src/images/pic2.jpg)
 
 Tipos de análisis que ofrece Lighthouse en Chrome 67.0
 
@@ -58,7 +58,7 @@ En esta categoría, las métricas en las que se basa el análisis son muy orient
 
 <!--EndFragment-->
 
-![ejemplo](/src/images/pic4.png)
+![ejemplo](/src/images/pic4.jpg)
 
 <!--StartFragment-->
 
@@ -68,7 +68,7 @@ Más abajo, en la interfaz, también se ofrecen consejos generales de qué mejor
 
 <!--EndFragment-->
 
-![ejemplo](/src/images/pic5.png)
+![ejemplo](/src/images/pic5.jpg)
 
 Según la imagen, podrían ahorrarse hasta 340 milisegundos en tiempo de carga aparente de cara al usuario, lo que significaría cortarlo casi por la mitad.
 
