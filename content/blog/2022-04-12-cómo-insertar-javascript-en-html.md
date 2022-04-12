@@ -100,7 +100,7 @@ document.body.innerHTML = "<h1>Time right now is:  " + d.getHours() + ":" + d.ge
 
 Así es como se vería el resultado final:
 
-<https://www.hostinger.es/tutoriales/wp-content/uploads/sites/7/2018/04/insertar-javascript-en-html-1.png>
+[h](https://www.hostinger.es/tutoriales/wp-content/uploads/sites/7/2018/04/insertar-javascript-en-html-1.png)
 
 ![ejemplo](/assets/images/insertar-javascript-en-html-1.png "ejemplo")
 
