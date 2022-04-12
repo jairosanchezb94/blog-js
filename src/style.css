@@ -55,11 +55,11 @@
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
   --color-primary: #3b69a5;
-  --color-text: #2e353f;
-  --color-text-light: #D9D9D9;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
-  --color-accent: #1b014de5;
+  --color-text: #d9d9d9;
+  --color-text-light: #7e7e7e;
+  --color-heading: #e6e6e6;
+  --color-heading-black: rgb(206, 206, 206);
+  --color-accent: #0e0029e5;
 }
 
 /* HTML elements */
@@ -71,6 +71,7 @@
 }
 
 html {
+  background: #1b014de5;
   line-height: var(--lineHeight-normal);
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;

@@ -13,6 +13,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`, 
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,8 +34,10 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: `gatsby-remark-highlight-code`,
             options: {
+              terminal: "carbon",
+              theme: "bmonokai",
               maxWidth: 630,
             },
           },
