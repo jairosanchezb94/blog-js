@@ -26,7 +26,7 @@ Para lanzar la herramienta, no hay más que acceder al sitio web que queramos an
 
 <!--EndFragment-->
 
-![](/src/images/pic1.png)
+![ejemplo: ](/src/images/pic1.png)
 
 <!--StartFragment-->
 
@@ -36,7 +36,7 @@ Tras pulsar en *Perform an audit…*, podemos elegir entre las categorías que 
 
 <!--EndFragment-->
 
-![](/src/images/pic2.png)
+![ejemplo: ](/src/images/pic2.png)
 
 Tipos de análisis que ofrece Lighthouse en Chrome 67.0
 
@@ -58,7 +58,7 @@ En esta categoría, las métricas en las que se basa el análisis son muy orient
 
 <!--EndFragment-->
 
-![](/src/images/pic4.png)
+![ejemplo: ](/src/images/pic4.png)
 
 <!--StartFragment-->
 
@@ -68,7 +68,7 @@ Más abajo, en la interfaz, también se ofrecen consejos generales de qué mejor
 
 <!--EndFragment-->
 
-![](/src/images/pic5.png)
+![ejemplo: ](/src/images/pic5.png)
 
 Según la imagen, podrían ahorrarse hasta 340 milisegundos en tiempo de carga aparente de cara al usuario, lo que significaría cortarlo casi por la mitad.
 
@@ -81,8 +81,6 @@ Todo esto está muy bien, pero conviene no dejarse llevar por el enfoque simplis
 No sólo esto, otros factores también son importantes. Navegar por la web debería ser algo simple, y más con tecnología que está continuamente mejorando; cosas como que el móvil no queme al tacto, que el usuario no tenga que recargar la batería del móvil cada 8 horas o no se le obligue a gastar hasta el [80% de los datos de su tarifa en anuncios](https://www.techdirt.com/articles/20160317/09274333934/why-are-people-using-ad-blockers-ads-can-eat-up-to-79-mobile-data-allotments.shtml), no parecen mucho pedir.
 
 Y no es sólo que todo esto sea interesante, es que tiene repercusiones. Parece inevitable que la web que no tenga en cuenta el rendimiento, perderá usuarios a favor de la que sí lo haga, y la que abuse del uso de anuncios, perderá sus beneficios a favor del uso de *adblockers*.
-
- 
 
 <!--EndFragment-->
 
