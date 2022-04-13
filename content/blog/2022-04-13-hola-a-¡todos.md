@@ -7,7 +7,7 @@ date: 2022-04-13T10:05:27.383Z
 
 ![](/4ece9a7bfba5b1893fc54508892b11eb.gif)
 
-Buenas a mi blog donde subiré cositas que vaya aprendiendo en la programación como en diseño y gestión de redes sociales, también entre otras cosas ajenas al mundo laboral subiré contenido entretenido que será compartido en Linkedin y Twitter (esto siempre que tenga cositas que subir). 
+Buenas este es mi blog donde subiré cositas que vaya aprendiendo en la programación como en diseño y gestión de redes sociales, también entre otras cosas ajenas al mundo laboral subiré contenido entretenido que será compartido en Linkedin y Twitter (esto siempre que tenga cositas que subir). 
 
 ```html
 <html>
@@ -22,8 +22,6 @@ Buenas a mi blog donde subiré cositas que vaya aprendiendo en la programación 
 ```
 
 Pues nada encantado de compartir mi experiencias en este blog. 
-
-
 
 Bienvenidos todos.
 
