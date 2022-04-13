@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Hola a, ¡TODOS!
+title: ¡Hola a TODOS!
 date: 2022-04-13T10:05:27.383Z
 ---
 <!--StartFragment-->
