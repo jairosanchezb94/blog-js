@@ -18,14 +18,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
+        name: `/content/blog`,
         path: `${__dirname}/content/blog`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
+        name: `/src/images`,
         path: `${__dirname}/src/images`,
       },
     },
@@ -48,6 +48,12 @@ module.exports = {
               withWebp: true,
               showCaptions: true,
               quality: 100,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              noInlineHighlight: true,
             },
           },
           {
