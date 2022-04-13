@@ -10,7 +10,7 @@
   "dependencies": {
     "@deckdeckgo/highlight-code": "^3.6.0",
     "@netlify/plugin-gatsby": "^3.0.0",
-    "gatsby": "^4.11.3",
+    "gatsby": "^4.12.1",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-feed": "^4.11.1",
     "gatsby-plugin-gatsby-cloud": "^4.11.1",

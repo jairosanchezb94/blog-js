@@ -1,3 +1,13 @@
+const generateFavicons = (sizes) => {
+  return sizes.map(size => {
+    return {
+      src: `favicons/icon-${size}x${size}.png`,
+      sizes: `${size}x${size}`,
+      type: "image/png",
+    };
+  });
+};
+
 module.exports = {
   siteMetadata: {
     title: `Jairo Sánchez Blog`,
@@ -141,6 +151,7 @@ module.exports = {
         //theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/perfil.png`, // This path is relative to the root of the site.
+        icons: generateFavicons([48, 72, 96, 144, 192, 256, 384, 512]),
       },
     },
     `gatsby-plugin-react-helmet`,
