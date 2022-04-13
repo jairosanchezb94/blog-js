@@ -5,7 +5,7 @@ import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { Helmet } from "react-helmet"
+import Helmet from "react-helmet"
 
 
 deckDeckGoHighlightElement(); 
