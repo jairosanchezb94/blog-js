@@ -120,7 +120,7 @@ Esto sería el resultado de todos los elementos por consola y la web.
 
 <!--EndFragment-->
 
-![](/content/blog/screenshot-2022-04-19-123342.png)
+![](/screenshot-2022-04-19-123342.png)
 
 <!--StartFragment-->
 
