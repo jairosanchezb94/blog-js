@@ -41,10 +41,4 @@ var x = (condition); // var x = (foo == "bar");
 
 - - -
 
-**ACTUALIZACIÓN** En relación con su muestra, esto probablemente sea más apropiado:
-
-```javascript
-defaults.slideshowWidth = defaults.slideshowWidth || obj.find('img').width()+'px';
-```
-
 <!--EndFragment-->
