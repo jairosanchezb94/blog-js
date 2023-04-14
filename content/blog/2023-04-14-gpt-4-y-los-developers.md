@@ -5,7 +5,7 @@ date: 2023-04-14T15:58:33.084Z
 ---
 <!--StartFragment-->
 
-![](/content/blog/shutterstock-2269315911-1256x826.png)
+![Imagen chats-gpt](/content/blog/shutterstock-2269315911-1256x826.png "Chats-GPT")
 
 La próxima salida de GPT-4, un modelo de lenguaje de inteligencia artificial muy avanzado, puede tener un gran impacto en el trabajo de los programadores y en la forma en que se desarrollan las aplicaciones de software.
 
