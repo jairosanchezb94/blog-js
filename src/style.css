@@ -54,7 +54,7 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #3b69a5;
+  --color-primary: #81713a;
   --color-text: #ffffff;
   --color-text-light: #d9d9d0;
   --color-heading: #e6e6e6;
@@ -71,7 +71,7 @@
 }
 
 html {
-  background: #1b014de5;
+  background: #405744;
   background-image: url(../src/images/black-orchid.png);
   line-height: var(--lineHeight-normal);
   font-size: var(--fontSize-root);
