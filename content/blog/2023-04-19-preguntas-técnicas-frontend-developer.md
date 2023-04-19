@@ -15,8 +15,7 @@ En este blog v﻿oy a dejar unas cuantas claves técnicas para esas posibles pre
 
 <!--StartFragment-->
 
-Ciclo de vida de Agular: son componentes que se encuentran en el ciclo de vida de angular se divide en 8 etapas las cuales son:\
-\
+Ciclo de vida de Agular: son componentes que se encuentran en el ciclo de vida de angular se divide en 8 etapas las cuales son:
 
 1. **\*ngOnChanges**: este evento se ejecuta cada ver que cambia el valor del input control, siempre recibe el data map.
 
@@ -41,8 +40,6 @@ export class MyComponentComponent implements OnChanges {
   }
 }
 ```
-
-\
 
 2. **\*ngOnInit**: se ejecuta cuando se ha desplegado los data-bound-propertis o cuando se ha inicializado del ngOnChanges. Lo uso para inicializar datos en el componente.
 
@@ -70,11 +67,9 @@ export class MyComponentComponent implements OnInit {
 }
 ```
 
-\
-
-3. **ngDoCheck**: aquí puedes poner la logica o cambios para cualquier componente.\
-4. **ngAfterContentInit**: se ejecuta justo despues de ngDoCheck y esta vinculado a los componentes hijos.\
-5. **ngAfterContentChecked**: este evento llama al ngAfterContentInit y se invoca posteriormente de ngDoCheck.\
+3. **ngDoCheck**: aquí puedes poner la logica o cambios para cualquier componente.
+4. **ngAfterContentInit**: se ejecuta justo despues de ngDoCheck y esta vinculado a los componentes hijos.
+5. **ngAfterContentChecked**: este evento llama al ngAfterContentInit y se invoca posteriormente de ngDoCheck.
 6. **\*ngAfterViewInit**: este evento se ejecuta en la vista del componente y llama despues al ngAfterContentChecked.
 
 E﻿jemplo: 
@@ -97,9 +92,7 @@ export class MyComponentComponent implements AfterViewInit {
 }
 ```
 
-\
-
-7. **ngAfterViewChecked**: aquí se puede ver cuando el componente espera algun valor que proviene de sus componentes secundarios.\
+7. **ngAfterViewChecked**: aquí se puede ver cuando el componente espera algun valor que proviene de sus componentes secundarios.
 8. **ngOnDestroy**: este evento se ejecuta para destruir los componentes, tienes que darte de baja de los componentes event handlers para evitar memory leaks o fugas de memoria.
 
 <!--EndFragment-->
@@ -108,9 +101,9 @@ export class MyComponentComponent implements AfterViewInit {
 
 <!--StartFragment-->
 
-Para detectar cambios Angular tiene dos estrategias:\
+Para detectar cambios Angular tiene dos estrategias:
 
-1. **default**: empieza a recorrer el árbol de componentes desde el principio para comprobar si tiene que actualizar algo.\
+1. **default**: empieza a recorrer el árbol de componentes desde el principio para comprobar si tiene que actualizar algo.
 2. **OnPush**: Los componentes que utilizan esta estrategia se saltan los ciclos de detección de cambios a menos que se trate de un cambio de estado interno del propio componente o de sus inputs.
 
 <!--EndFragment-->
@@ -162,7 +155,7 @@ Redux es un gestor del estado centralizado, para gestionar la comunicación entr
 **NgRx** es el estándar de facto para implementar Redux en Angular. Está basada en **RxJS** y es una librería modular con todo lo necesario para crear grandes aplicaciones.
 
 \
-Sus componentes son:\
+Sus componentes son:
 
 1. **store**: Es el módulo principal con el administrador del estado centralizado y reactivo.
 
@@ -196,8 +189,6 @@ const store = createStore(reducer);
 
 export default store;
 ```
-
-\
 
 2. **store-devtools**: Instrumentación para depurar desde el navegador. Vale su peso en oro.
 
@@ -233,8 +224,6 @@ const store = createStore(reducer, composeWithDevTools());
 export default store;
 ```
 
-\
-
 3. **router-Store**: Almacena el estado del router de Angular en el store, tratando cada evento como una acción Redux.
 
 E﻿jemplo:
@@ -255,8 +244,6 @@ import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
 })
 export class AppModule {}
 ```
-
-\
 
 4. **effects**: Los reductores son funciones puras sin efectos colaterales. Este módulo es la solución para comandos asíncronos.
 
@@ -289,8 +276,6 @@ export class TodoEffects {
 }
 ```
 
-\
-
 5. **schematics, entity, ngrx-data**: Son otros módulos opcionales con ayudas y plantillas de NgRX.
 
 <!--EndFragment-->
@@ -313,7 +298,6 @@ RxJS es una biblioteca de programación reactiva para JavaScript que se utiliza 
      error => console.error(error),
      () => console.log('Completado')
    );
-
    ```
 2. **\*from()**: Convierte un objeto iterable o un observable-like en un observable.
 
@@ -328,7 +312,6 @@ RxJS es una biblioteca de programación reactiva para JavaScript que se utiliza 
      error => console.error(error),
      () => console.log('Completado')
    );
-
    ```
 3. **\*map()**: Transforma cada valor emitido por un observable mediante una función.
 
@@ -346,7 +329,6 @@ RxJS es una biblioteca de programación reactiva para JavaScript que se utiliza 
      error => console.error(error),
      () => console.log('Completado')
    );
-
    ```
 4. **\*filter()**: Filtra los valores emitidos por un observable según un predicado.
 
@@ -364,7 +346,6 @@ RxJS es una biblioteca de programación reactiva para JavaScript que se utiliza 
      error => console.error(error),
      () => console.log('Completado')
    );
-
    ```
 5. **tap()**: Realiza una operación secundaria en cada valor emitido sin alterar el valor original.
 
@@ -382,7 +363,6 @@ RxJS es una biblioteca de programación reactiva para JavaScript que se utiliza 
      error => console.error(error),
      () => console.log('Completado')
    );
-
    ```
 6. **\*debounceTime()**: Espera un tiempo determinado después de que se emite un valor antes de pasar el valor al siguiente operador.
 
@@ -400,7 +380,6 @@ RxJS es una biblioteca de programación reactiva para JavaScript que se utiliza 
      error => console.error(error),
      () => console.log('Completado')
    );
-
    ```
 7. **\*switchMap()**: Transforma cada valor emitido por un observable en otro observable y emite los valores del último observable.
 
@@ -418,8 +397,6 @@ RxJS es una biblioteca de programación reactiva para JavaScript que se utiliza 
      error => console.error(error),
      () => console.log('Completado')
    );
-
-
    ```
 8. **\*catchError()**: Maneja errores en un observable y proporciona una alternativa para emitir valores.
 
@@ -433,7 +410,6 @@ RxJS es una biblioteca de programación reactiva para JavaScript que se utiliza 
 
    observable$.subscribe(
      value => console.log(value), // Imprime 'Ocurrió un error' en consola
-
    ```
 9. **merge()**: Combina múltiples observables en uno solo que emite valores de todos los observables de manera concurrente.
 10. **take()**: Emite un número determinado de valores y luego completa el observable.
