@@ -1,11 +1,11 @@
 ---
 layout: blog
-title: GPT-4 l los Developers
-date: 2023-04-14T15:42:16.564Z
+title: GPT-4 y los Developers
+date: 2023-04-14T15:58:33.084Z
 ---
 <!--StartFragment-->
 
-![](/content/blog/shutterstock-2269315911-1256x826.png)
+![]()
 
 La próxima salida de GPT-4, un modelo de lenguaje de inteligencia artificial muy avanzado, puede tener un gran impacto en el trabajo de los programadores y en la forma en que se desarrollan las aplicaciones de software.
 
@@ -25,7 +25,7 @@ En resumen, la llegada de GPT-4 tiene el potencial de transformar la forma en qu
 
 <!--StartFragment-->
 
-![](/content/blog/chatgpt.png)
+![]()
 
 Aunque la salida de chatbots como GPT-4 puede ser emocionante y prometedora en términos de lo que se puede lograr en el futuro, hay algunos inconvenientes que los programadores deben considerar. Aquí hay algunos:
 
