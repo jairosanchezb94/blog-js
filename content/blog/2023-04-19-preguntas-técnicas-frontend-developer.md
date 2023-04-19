@@ -17,7 +17,8 @@ En este blog v﻿oy a dejar unas cuantas claves técnicas para esas posibles pre
 
 Ciclo de vida de Agular: son componentes que se encuentran en el ciclo de vida de angular se divide en 8 etapas las cuales son:\
 \
-1. ***ngOnChanges**: este evento se ejecuta cada ver que cambia el valor del input control, siempre recibe el data map.
+
+1. **\*ngOnChanges**: este evento se ejecuta cada ver que cambia el valor del input control, siempre recibe el data map.
 
 E﻿jemplo:
 
@@ -39,11 +40,11 @@ export class MyComponentComponent implements OnChanges {
     }
   }
 }
-
 ```
 
 \
-2. ***ngOnInit**: se ejecuta cuando se ha desplegado los data-bound-propertis o cuando se ha inicializado del ngOnChanges. Lo uso para inicializar datos en el componente.
+
+2. **\*ngOnInit**: se ejecuta cuando se ha desplegado los data-bound-propertis o cuando se ha inicializado del ngOnChanges. Lo uso para inicializar datos en el componente.
 
 E﻿jemplo:
 
@@ -67,14 +68,14 @@ export class MyComponentComponent implements OnInit {
     // Lógica para hacer una petición HTTP y asignar los datos a la propiedad "data"
   }
 }
-
 ```
 
 \
+
 3. **ngDoCheck**: aquí puedes poner la logica o cambios para cualquier componente.\
 4. **ngAfterContentInit**: se ejecuta justo despues de ngDoCheck y esta vinculado a los componentes hijos.\
 5. **ngAfterContentChecked**: este evento llama al ngAfterContentInit y se invoca posteriormente de ngDoCheck.\
-6. ***ngAfterViewInit**: este evento se ejecuta en la vista del componente y llama despues al ngAfterContentChecked.
+6. **\*ngAfterViewInit**: este evento se ejecuta en la vista del componente y llama despues al ngAfterContentChecked.
 
 E﻿jemplo: 
 
@@ -94,10 +95,10 @@ export class MyComponentComponent implements AfterViewInit {
     // Lógica para inicializar plugins o configurar eventos en el elemento referenciado por "myElement"
   }
 }
-
 ```
 
 \
+
 7. **ngAfterViewChecked**: aquí se puede ver cuando el componente espera algun valor que proviene de sus componentes secundarios.\
 8. **ngOnDestroy**: este evento se ejecuta para destruir los componentes, tienes que darte de baja de los componentes event handlers para evitar memory leaks o fugas de memoria.
 
@@ -108,6 +109,7 @@ export class MyComponentComponent implements AfterViewInit {
 <!--StartFragment-->
 
 Para detectar cambios Angular tiene dos estrategias:\
+
 1. **default**: empieza a recorrer el árbol de componentes desde el principio para comprobar si tiene que actualizar algo.\
 2. **OnPush**: Los componentes que utilizan esta estrategia se saltan los ciclos de detección de cambios a menos que se trate de un cambio de estado interno del propio componente o de sus inputs.
 
@@ -161,6 +163,7 @@ Redux es un gestor del estado centralizado, para gestionar la comunicación entr
 
 \
 Sus componentes son:\
+
 1. **store**: Es el módulo principal con el administrador del estado centralizado y reactivo.
 
 E﻿jemplo: 
@@ -192,10 +195,10 @@ function reducer(state = initialState, action) {
 const store = createStore(reducer);
 
 export default store;
-
 ```
 
 \
+
 2. **store-devtools**: Instrumentación para depurar desde el navegador. Vale su peso en oro.
 
 E﻿jemplo:
@@ -228,10 +231,10 @@ function reducer(state = initialState, action) {
 const store = createStore(reducer, composeWithDevTools());
 
 export default store;
-
 ```
 
 \
+
 3. **router-Store**: Almacena el estado del router de Angular en el store, tratando cada evento como una acción Redux.
 
 E﻿jemplo:
@@ -251,10 +254,10 @@ import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
   // ...
 })
 export class AppModule {}
-
 ```
 
 \
+
 4. **effects**: Los reductores son funciones puras sin efectos colaterales. Este módulo es la solución para comandos asíncronos.
 
 E﻿jemplo:
@@ -284,10 +287,10 @@ export class TodoEffects {
 
   constructor(private actions$: Actions, private apiService: ApiService) {}
 }
-
 ```
 
 \
+
 5. **schematics, entity, ngrx-data**: Son otros módulos opcionales con ayudas y plantillas de NgRX.
 
 <!--EndFragment-->
@@ -299,13 +302,139 @@ export class TodoEffects {
 RxJS es una biblioteca de programación reactiva para JavaScript que se utiliza comúnmente en aplicaciones de Angular. A continuación se describen algunos de los métodos más comunes de RxJS:
 
 1. **\*of()**: Crea un observable que emite una secuencia de valores definidos.
+
+   ```javascript
+   import { of } from 'rxjs';
+
+   const observable$ = of(1, 2, 3);
+
+   observable$.subscribe(
+     value => console.log(value), // Imprime 1, 2, 3 en consola
+     error => console.error(error),
+     () => console.log('Completado')
+   );
+
+   ```
 2. **\*from()**: Convierte un objeto iterable o un observable-like en un observable.
+
+   ```javascript
+   import { from } from 'rxjs';
+
+   const array = [1, 2, 3];
+   const observable$ = from(array);
+
+   observable$.subscribe(
+     value => console.log(value), // Imprime 1, 2, 3 en consola
+     error => console.error(error),
+     () => console.log('Completado')
+   );
+
+   ```
 3. **\*map()**: Transforma cada valor emitido por un observable mediante una función.
+
+   ```javascript
+   import { from } from 'rxjs';
+   import { map } from 'rxjs/operators';
+
+   const array = [1, 2, 3];
+   const observable$ = from(array).pipe(
+     map(value => value * 2)
+   );
+
+   observable$.subscribe(
+     value => console.log(value), // Imprime 2, 4, 6 en consola
+     error => console.error(error),
+     () => console.log('Completado')
+   );
+
+   ```
 4. **\*filter()**: Filtra los valores emitidos por un observable según un predicado.
+
+   ```javascript
+   import { from } from 'rxjs';
+   import { filter } from 'rxjs/operators';
+
+   const array = [1, 2, 3];
+   const observable$ = from(array).pipe(
+     filter(value => value > 1)
+   );
+
+   observable$.subscribe(
+     value => console.log(value), // Imprime 2, 3 en consola
+     error => console.error(error),
+     () => console.log('Completado')
+   );
+
+   ```
 5. **tap()**: Realiza una operación secundaria en cada valor emitido sin alterar el valor original.
+
+   ```javascript
+   import { from } from 'rxjs';
+   import { tap } from 'rxjs/operators';
+
+   const array = [1, 2, 3];
+   const observable$ = from(array).pipe(
+     tap(value => console.log(`Valor emitido: ${value}`))
+   );
+
+   observable$.subscribe(
+     value => console.log(value),
+     error => console.error(error),
+     () => console.log('Completado')
+   );
+
+   ```
 6. **\*debounceTime()**: Espera un tiempo determinado después de que se emite un valor antes de pasar el valor al siguiente operador.
+
+   ```javascript
+   import { fromEvent } from 'rxjs';
+   import { debounceTime } from 'rxjs/operators';
+
+   const input = document.querySelector('input');
+   const observable$ = fromEvent(input, 'input').pipe(
+     debounceTime(500)
+   );
+
+   observable$.subscribe(
+     event => console.log(event.target.value),
+     error => console.error(error),
+     () => console.log('Completado')
+   );
+
+   ```
 7. **\*switchMap()**: Transforma cada valor emitido por un observable en otro observable y emite los valores del último observable.
+
+   ```javascript
+   import { fromEvent, of } from 'rxjs';
+   import { switchMap } from 'rxjs/operators';
+
+   const button = document.querySelector('button');
+   const observable$ = fromEvent(button, 'click').pipe(
+     switchMap(() => of('Hola Mundo'))
+   );
+
+   observable$.subscribe(
+     value => console.log(value), // Imprime 'Hola Mundo' en consola al hacer clic en el botón
+     error => console.error(error),
+     () => console.log('Completado')
+   );
+
+
+   ```
 8. **\*catchError()**: Maneja errores en un observable y proporciona una alternativa para emitir valores.
+
+   ```javascript
+   import { throwError, of } from 'rxjs';
+   import { catchError } from 'rxjs/operators';
+
+   const observable$ = throwError('Error!').pipe(
+     catchError(() => of('Ocurrió un error'))
+   );
+
+   observable$.subscribe(
+     value => console.log(value), // Imprime 'Ocurrió un error' en consola
+
+   ```
 9. **merge()**: Combina múltiples observables en uno solo que emite valores de todos los observables de manera concurrente.
 10. **take()**: Emite un número determinado de valores y luego completa el observable.
 11. **retry()**: Intenta emitir los valores de un observable varias veces si se produce un error.
@@ -441,7 +570,6 @@ const tasks = [
   { id: 2, title: "Llamar al médico", description: "Pedir cita para la semana que viene", completed: false },
   { id: 3, title: "Pasar la aspiradora", description: "Limpiar la casa", completed: true }
 ];
-
 ```
 
 <!--StartFragment-->
@@ -474,7 +602,6 @@ tasks.forEach(task => {
 
   taskList.appendChild(taskElement);
 });
-
 ```
 
 <!--StartFragment-->
@@ -546,10 +673,6 @@ Para optimizar el uso de `useMemo`, se pueden seguir algunas prácticas recomend
    * `SelectivePreloadingStrategy`: Permite definir una estrategia personalizada para la precarga de módulos.
 
    La elección de la estrategia adecuada dependerá de las necesidades y características de la aplicación. En general, es recomendable utilizar una estrategia que cargue los módulos críticos para la experiencia del usuario de manera anticipada, mientras se evita cargar excesivamente los recursos para no sobrecargar la red y los recursos del usuario.
-
-   <!--EndFragment-->
-
-
 
 <!--StartFragment-->
 
