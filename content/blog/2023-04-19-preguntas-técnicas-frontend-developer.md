@@ -547,7 +547,6 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.log(error));
-
 ```
 
 ## **F﻿unciones callback**
@@ -713,7 +712,6 @@ El bucle `for` es un bucle clásico que se utiliza para iterar sobre los element
 for (let i = 0; i < array.length; i++) {
   // código a ejecutar en cada iteración
 }
-
 ```
 
 <!--EndFragment-->
@@ -728,7 +726,6 @@ Por otro lado, `forEach` es un método de la matriz que se utiliza para ejecutar
 array.forEach(function(element) {
   // código a ejecutar en cada iteración
 });
-
 ```
 
 <!--EndFragment-->
@@ -852,6 +849,169 @@ En este ejemplo, estamos utilizando JavaScript para crear elementos HTML dinámi
 Este es sólo un ejemplo sencillo, pero muestra cómo JavaScript puede utilizarse para controlar el estado de una aplicación y renderizar la información de manera dinámica en la interfaz de usuario.
 
 <!--EndFragment-->
+
+<!--EndFragment-->
+
+## Arrow Function
+
+<!--StartFragment-->
+
+Una arrow function en JavaScript es una forma abreviada de definir una función mediante una sintaxis más compacta y expresiva utilizando una flecha `=>`. Estas funciones se suelen utilizar para crear funciones anónimas, como devolver una función como valor de retorno de otra función, o para asignar una función a una constante o variable.
+
+Aquí te dejo varios ejemplos de cómo puedes definir una arrow function en JavaScript:
+
+1. Función que devuelve el cuadrado de un número:
+
+   ```javascript
+   const square = (num) => num * num;
+   console.log(square(5)); // output: 25
+   ```
+2. Función que devuelve el número más grande de una lista:
+
+   ```javascript
+   const maxNumber = (numbers) => {
+     let max = numbers[0];
+     for (let i = 1; i < numbers.length; i++) {
+       if (numbers[i] > max) {
+         max = numbers[i];
+       }
+     }
+     return max;
+   };
+   console.log(maxNumber([10, 20, 5, 8])); // output: 20
+   ```
+3. Función que devuelve una cadena en mayúsculas:
+
+   ```javascript
+   const toUpperCase = (str) => str.toUpperCase();
+   console.log(toUpperCase("hola mundo")); // output: HOLA MUNDO
+   ```
+4. Función que devuelve una nueva lista con los números impares:
+
+   ```javascript
+   const oddNumbers = (numbers) => {
+     return numbers.filter((num) => num % 2 !== 0);
+   };
+   console.log(oddNumbers([1, 2, 3, 4, 5])); // output: [1, 3, 5]
+   ```
+5. Función que devuelve una función que suma dos números:
+
+   ```javascript
+   const add = () => {
+     return (num1, num2) => num1 + num2;
+   };
+   const sum = add();
+   console.log(sum(5, 10)); // output: 15
+   ```
+
+<!--EndFragment-->
+
+<!--StartFragment-->
+
+En general, la arrow function es una forma más concisa y legible de definir funciones en JavaScript, especialmente cuando se trabaja con funciones de una sola línea o cuando se necesita una sintaxis más clara para devolver valores.
+
+<!--EndFragment-->
+
+## Diferencia entre “==” y “===”
+
+<!--StartFragment-->
+
+Son operadores de comparación que se utilizan para comparar valores. Sin embargo, hay una diferencia importante entre ellos.
+
+El operador "==" compara los valores de dos operandos y devuelve `true` si son iguales. Sin embargo, este operador realiza una conversión de tipo (coerción) antes de hacer la comparación. Esto significa que si los tipos de los operandos no son iguales, JavaScript intentará convertir uno o ambos operandos para hacerlos iguales en tipo antes de hacer la comparación. Por ejemplo:
+
+```javascript
+console.log(5 == "5"); // output: true
+```
+
+<!--EndFragment-->
+
+<!--StartFragment-->
+
+En este caso, el operador "==" devuelve `true` porque JavaScript convierte la cadena "5" en un número antes de hacer la comparación.
+
+Por otro lado, el operador "===" también compara los valores de dos operandos, pero no realiza una conversión de tipo antes de hacer la comparación. Esto significa que los operandos deben ser del mismo tipo para que la comparación sea verdadera. Por ejemplo:
+
+```javascript
+console.log(5 === "5"); // output: false
+```
+
+<!--StartFragment-->
+
+En este caso, el operador "===" devuelve `false` porque los operandos son de tipos diferentes y no son iguales en valor.
+
+En general, es una buena práctica utilizar el operador "===" en lugar de "==" siempre que sea posible, ya que permite hacer comparaciones más precisas y evitar errores de conversión de tipo no deseados.
+
+<!--EndFragment-->
+
+## Diferencia entre null y undefined
+
+<!--StartFragment-->
+
+Tanto "null" como "undefined" se utilizan para representar la ausencia de un valor, pero tienen diferencias sutiles en su uso y comportamiento.
+
+La palabra clave "undefined" se utiliza para denotar una variable que no ha sido inicializada o que no tiene un valor asignado. También puede ser el valor de retorno de una función si no se especifica un valor de retorno. Por ejemplo:
+
+```javascript
+let x;
+console.log(x); // output: undefined
+
+function myFunction() {
+  // No se especifica un valor de retorno
+}
+console.log(myFunction()); // output: undefined
+```
+
+<!--EndFragment-->
+
+<!--StartFragment-->
+
+Por otro lado, la palabra clave "null" se utiliza para denotar que una variable tiene un valor vacío o nulo. Es decir, se utiliza para indicar que una variable tiene la intención de no tener ningún valor. Por ejemplo:
+
+```javascript
+let y = null;
+console.log(y); // output: null
+```
+
+<!--EndFragment-->
+
+<!--StartFragment-->
+
+Otra diferencia es que "undefined" se considera un tipo de dato primitivo en JavaScript, mientras que "null" se considera un objeto. Esto se debe a un error de diseño en el lenguaje, donde "typeof null" devuelve "object" en lugar de "null".
+
+En general, "undefined" se utiliza para indicar una variable no inicializada o un valor de retorno faltante, mientras que "null" se utiliza para indicar un valor vacío o nulo.
+
+<!--EndFragment-->
+
+## Tipos de datos en javascript
+
+<!--StartFragment-->
+
+En JavaScript, hay siete tipos de datos primitivos:
+
+1. Números (number): se utilizan para representar valores numéricos, ya sean enteros o decimales.
+2. Cadenas (string): se utilizan para representar texto. Se encierran entre comillas simples o dobles.
+3. Booleanos (boolean): se utilizan para representar valores lógicos, es decir, verdadero o falso.
+4. Undefined: representa una variable que no ha sido inicializada o que no tiene un valor asignado.
+5. Null: representa un valor vacío o nulo.
+6. Symbol: se utiliza para representar valores únicos e inmutables. Se utiliza principalmente en la programación de objetos y clases avanzadas.
+7. BigInt: se utiliza para representar números enteros mayores que 2^53-1.
+
+Además de estos tipos de datos primitivos, JavaScript también tiene un tipo de dato no primitivo llamado "object", que puede contener una colección de valores y propiedades. "Object" se utiliza para representar estructuras de datos más complejas, como matrices, funciones y objetos definidos por el usuario.
+
+En JavaScript, el tipo de dato de una variable se determina automáticamente según el valor que se le asigna. Por ejemplo:
+
+```javascript
+let x = 5; // x es del tipo número
+let y = "Hola"; // y es del tipo cadena
+let z = true; // z es del tipo booleano
+```
+
+<!--EndFragment-->
+
+<!--StartFragment-->
+
+Es importante tener en cuenta los tipos de datos en JavaScript, ya que esto puede afectar la forma en que se manipulan los datos y se realizan las operaciones.
 
 <!--EndFragment-->
 
