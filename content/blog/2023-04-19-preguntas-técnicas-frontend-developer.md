@@ -490,7 +490,7 @@ En resumen, las pipes se utilizan para transformar los datos en la presentación
 
 # **J﻿avaScript**
 
-¿﻿Que es una función?
+## ¿﻿Que es una función?
 
 <!--StartFragment-->
 
