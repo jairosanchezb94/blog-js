@@ -437,10 +437,9 @@ En Angular, existen pipes predefinidas como `DatePipe`, `UpperCasePipe`, `LowerC
 
 Un ejemplo de uso de una pipe podría ser el siguiente:
 
-```phtml
+```html
 <!-- Mostrar la fecha actual en un formato personalizado -->
 <p>La fecha actual es: {{ fecha | date:'dd/MM/yyyy' }}</p>
-
 ```
 
 <!--StartFragment-->
@@ -610,7 +609,6 @@ Para guardar un array de objetos en JavaScript, simplemente se crea una variable
      { nombre: 'María', edad: 25 },
      { nombre: 'Pedro', edad: 40 }
    ];
-
    ```
 
 <!--EndFragment-->
@@ -627,7 +625,6 @@ let matriz = [
   [4, 5, 6],
   [7, 8, 9]
 ];
-
 ```
 
 <!--EndFragment-->
@@ -644,7 +641,6 @@ let persona2 = personas[1];
 
 // Acceder al tercer elemento del segundo array de la matriz
 let elemento32 = matriz[1][2];
-
 ```
 
 <!--EndFragment-->
