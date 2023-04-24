@@ -518,6 +518,38 @@ En el ejemplo, se define una función llamada `sumar` que recibe dos parámetros
 
 <!--EndFragment-->
 
+## ¿C﻿omo cosumir una api desde una función?
+
+<!--StartFragment-->
+
+En este ejemplo, la función `getApiData()` utiliza la API de prueba JSONPlaceholder para obtener los datos del primer TODO. La API se consume utilizando Fetch API, que es una forma nativa de JavaScript de hacer solicitudes HTTP asincrónicas.
+
+Luego, se llama a la función `getApiData()` para consumir la API desde dentro de la función. Fuera de la función, se utiliza la misma API pero sin la función, utilizando Fetch API directamente.
+
+En ambos casos, se utiliza `then()` para manejar los datos devueltos por la API y `catch()` para manejar cualquier error que se produzca durante la solicitud.
+
+<!--EndFragment-->
+
+```javascript
+// Función que consume una API utilizando Fetch API
+function getApiData() {
+  fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+}
+
+// Llamado a la función para consumir la API
+getApiData();
+
+// Consumo de la misma API fuera de la función
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.log(error));
+
+```
+
 ## **F﻿unciones callback**
 
 <!--StartFragment-->
@@ -595,7 +627,7 @@ Luego, se utiliza el método `then()` para manejar el resultado exitoso de la pr
 
 <!--StartFragment-->
 
-## ¿Como guardar una array de 
+## ¿Como guardar una array de
 
 ```javascript
 let personas = [
@@ -612,8 +644,6 @@ let personas = [
 Para guardar un array de objetos en JavaScript, simplemente se crea una variable que contenga un array y se le asigna un arreglo de objetos. Por ejemplo:
 
 <!--EndFragment-->
-
-
 
 <!--EndFragment-->
 
@@ -668,6 +698,48 @@ Un observable y una promesa son ambos mecanismos para manejar flujos asíncronos
 5. **Stream de datos**: Un observable es un flujo de datos continuo, mientras que una promesa solo emite un valor una sola vez.
 
 En resumen, un observable ofrece más funcionalidades y flexibilidad que una promesa. Los observables se pueden usar para manejar flujos de datos continuos y pueden ser cancelados en cualquier momento, lo que es particularmente útil en aplicaciones en tiempo real. Además, los operadores de transformación de los observables permiten que los datos se procesen de manera más compleja y flexible.
+
+<!--EndFragment-->
+
+## Diferencias entre for y forEach
+
+<!--StartFragment-->
+
+Son dos formas diferentes de iterar sobre elementos de una matriz (array). La principal diferencia entre ambas es su sintaxis y su forma de uso.
+
+El bucle `for` es un bucle clásico que se utiliza para iterar sobre los elementos de una matriz o cualquier otro objeto iterable. Su sintaxis es la siguiente:
+
+```javascript
+for (let i = 0; i < array.length; i++) {
+  // código a ejecutar en cada iteración
+}
+
+```
+
+<!--EndFragment-->
+
+<!--StartFragment-->
+
+En cada iteración, se ejecuta el código dentro de las llaves, y el índice `i` se incrementa en uno. El bucle `for` es útil cuando se necesita acceder a los elementos de una matriz por su índice, o cuando se necesita iterar un número determinado de veces.
+
+Por otro lado, `forEach` es un método de la matriz que se utiliza para ejecutar una función en cada elemento de la matriz. Su sintaxis es la siguiente:
+
+```javascript
+array.forEach(function(element) {
+  // código a ejecutar en cada iteración
+});
+
+```
+
+<!--EndFragment-->
+
+<!--StartFragment-->
+
+En cada iteración, se ejecuta la función con el elemento correspondiente como argumento. La función se puede definir como una función anónima o como una función flecha. El método `forEach` es útil cuando se necesita acceder a cada elemento de la matriz, pero no se requiere acceder a su índice.
+
+Otra diferencia importante es que `forEach` no puede ser detenido mediante `break` o `return`, mientras que el bucle `for` sí puede. Por lo tanto, si se necesita una forma de interrumpir la iteración antes de que se complete, el bucle `for` es la mejor opción.
+
+En resumen, el bucle `for` es útil cuando se necesita acceder a los elementos de una matriz por su índice o cuando se necesita iterar un número determinado de veces, mientras que `forEach` es útil cuando se necesita acceder a cada elemento de la matriz sin necesidad de acceder a su índice.
 
 <!--EndFragment-->
 
