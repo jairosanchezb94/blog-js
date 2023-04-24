@@ -494,7 +494,7 @@ En resumen, las pipes se utilizan para transformar los datos en la presentación
 
 <!--StartFragment-->
 
-una función es un bloque de código que se puede ejecutar en cualquier momento y que puede recibir parámetros de entrada, procesarlos y devolver un resultado o realizar una tarea específica. Las funciones se utilizan para modularizar el código, hacerlo más legible y fácil de entender, y para evitar la repetición de código.
+Una función es un bloque de código que se puede ejecutar en cualquier momento y que puede recibir parámetros de entrada, procesarlos y devolver un resultado o realizar una tarea específica. Las funciones se utilizan para modularizar el código, hacerlo más legible y fácil de entender, y para evitar la repetición de código.
 
 Las funciones pueden ser definidas por el programador o pueden ser parte de un lenguaje de programación predefinido. Las funciones definidas por el programador se llaman funciones personalizadas o funciones definidas por el usuario, mientras que las funciones predefinidas se llaman funciones incorporadas o funciones nativas.
 
