@@ -595,7 +595,17 @@ Luego, se utiliza el método `then()` para manejar el resultado exitoso de la pr
 
 <!--StartFragment-->
 
-## ¿Como guardar una array de objetos y como hacerlo si es array dentro de un array?
+## ¿Como guardar una array de 
+
+```javascript
+let personas = [
+  { nombre: 'Juan', edad: 30 },
+  { nombre: 'María', edad: 25 },
+  { nombre: 'Pedro', edad: 40 }
+];
+```
+
+## objetos y como hacerlo si es array dentro de un array?
 
 <!--StartFragment-->
 
@@ -603,13 +613,7 @@ Para guardar un array de objetos en JavaScript, simplemente se crea una variable
 
 <!--EndFragment-->
 
-1. ```javascript
-   let personas = [
-     { nombre: 'Juan', edad: 30 },
-     { nombre: 'María', edad: 25 },
-     { nombre: 'Pedro', edad: 40 }
-   ];
-   ```
+
 
 <!--EndFragment-->
 
