@@ -865,7 +865,6 @@ Aquí te dejo varios ejemplos de cómo puedes definir una arrow function en Java
    ```javascript
    const square = (num) => num * num;
    console.log(square(5)); // output: 25
-
    ```
 2. Función que devuelve el número más grande de una lista:
 
@@ -880,14 +879,12 @@ Aquí te dejo varios ejemplos de cómo puedes definir una arrow function en Java
      return max;
    };
    console.log(maxNumber([10, 20, 5, 8])); // output: 20
-
    ```
 3. Función que devuelve una cadena en mayúsculas:
 
    ```javascript
    const toUpperCase = (str) => str.toUpperCase();
    console.log(toUpperCase("hola mundo")); // output: HOLA MUNDO
-
    ```
 4. Función que devuelve una nueva lista con los números impares:
 
@@ -896,7 +893,6 @@ Aquí te dejo varios ejemplos de cómo puedes definir una arrow function en Java
      return numbers.filter((num) => num % 2 !== 0);
    };
    console.log(oddNumbers([1, 2, 3, 4, 5])); // output: [1, 3, 5]
-
    ```
 5. Función que devuelve una función que suma dos números:
 
@@ -906,7 +902,6 @@ Aquí te dejo varios ejemplos de cómo puedes definir una arrow function en Java
    };
    const sum = add();
    console.log(sum(5, 10)); // output: 15
-
    ```
 
 <!--EndFragment-->
@@ -927,7 +922,6 @@ El operador "==" compara los valores de dos operandos y devuelve `true` si son i
 
 ```javascript
 console.log(5 == "5"); // output: true
-
 ```
 
 <!--EndFragment-->
@@ -940,7 +934,6 @@ Por otro lado, el operador "===" también compara los valores de dos operandos, 
 
 ```javascript
 console.log(5 === "5"); // output: false
-
 ```
 
 <!--StartFragment-->
@@ -967,7 +960,6 @@ function myFunction() {
   // No se especifica un valor de retorno
 }
 console.log(myFunction()); // output: undefined
-
 ```
 
 <!--EndFragment-->
@@ -979,7 +971,6 @@ Por otro lado, la palabra clave "null" se utiliza para denotar que una variable 
 ```javascript
 let y = null;
 console.log(y); // output: null
-
 ```
 
 <!--EndFragment-->
@@ -1014,7 +1005,6 @@ En JavaScript, el tipo de dato de una variable se determina automáticamente seg
 let x = 5; // x es del tipo número
 let y = "Hola"; // y es del tipo cadena
 let z = true; // z es del tipo booleano
-
 ```
 
 <!--EndFragment-->
