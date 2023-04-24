@@ -462,6 +462,112 @@ En resumen, las pipes se utilizan para transformar los datos en la presentación
 
 # **J﻿avaScript**
 
+¿﻿Que es una función?
+
+<!--StartFragment-->
+
+una función es un bloque de código que se puede ejecutar en cualquier momento y que puede recibir parámetros de entrada, procesarlos y devolver un resultado o realizar una tarea específica. Las funciones se utilizan para modularizar el código, hacerlo más legible y fácil de entender, y para evitar la repetición de código.
+
+Las funciones pueden ser definidas por el programador o pueden ser parte de un lenguaje de programación predefinido. Las funciones definidas por el programador se llaman funciones personalizadas o funciones definidas por el usuario, mientras que las funciones predefinidas se llaman funciones incorporadas o funciones nativas.
+
+Las funciones tienen una sintaxis común, que incluye un nombre, una lista de parámetros, y un cuerpo de código que se ejecuta cuando se llama a la función. Un ejemplo básico de una función en JavaScript sería:
+
+<!--EndFragment-->
+
+```javascript
+function sumar(a, b) {
+  return a + b;
+}
+
+// llamar a la función con argumentos
+let resultado = sumar(2, 3);
+console.log(resultado); // Imprime 5
+
+```
+
+<!--StartFragment-->
+
+En el ejemplo, se define una función llamada `sumar` que recibe dos parámetros `a` y `b`. El cuerpo de la función simplemente suma los valores de `a` y `b` y devuelve el resultado utilizando la sentencia `return`. Luego, se llama a la función con los argumentos `2` y `3`, y se asigna el resultado a la variable `resultado`. Finalmente, se imprime el resultado en la consola utilizando la función `console.log()`.
+
+<!--EndFragment-->
+
+## **F﻿unciones callback**
+
+<!--StartFragment-->
+
+Una función de callback es una función que se pasa como argumento a otra función, y que será ejecutada en algún momento posterior dentro de esa función. En otras palabras, una función de callback es una función que se llama de vuelta después de que se haya completado una tarea.
+
+Las funciones de callback se utilizan en programación asincrónica para manejar eventos o respuestas que no se conocen en el momento en que se llama a una función. En lugar de esperar a que se complete la tarea antes de continuar con el resto del código, se puede pasar una función de callback que se llame una vez que se haya completado la tarea.
+
+Un ejemplo de función de callback en JavaScript podría ser el siguiente:
+
+<!--EndFragment-->
+
+```javascript
+function sumar(a, b, callback) {
+  let resultado = a + b;
+  callback(resultado);
+}
+
+function imprimirResultado(resultado) {
+  console.log("El resultado es " + resultado);
+}
+
+sumar(2, 3, imprimirResultado); // Llama a sumar() con la función imprimirResultado como callback
+
+```
+
+<!--StartFragment-->
+
+En el ejemplo, se define una función llamada `sumar` que toma dos parámetros `a` y `b`, y una función de callback `callback`. La función `sumar` suma `a` y `b`, y luego llama a la función de callback con el resultado como argumento.
+
+Luego, se define otra función llamada `imprimirResultado` que toma un parámetro `resultado`, y simplemente imprime el resultado en la consola. Finalmente, se llama a la función `sumar` con los argumentos `2`, `3`, y la función `imprimirResultado` como callback.
+
+Cuando se llama a `sumar`, se suma `2` y `3`, y se llama a la función `imprimirResultado` con el resultado (`5`) como argumento. La función `imprimirResultado` entonces imprime "El resultado es 5" en la consola.
+
+<!--EndFragment-->
+
+## **¿﻿Que es una promesa?**
+
+<!--StartFragment-->
+
+Es un objeto que representa el valor futuro de una operación asíncrona. En otras palabras, una promesa es una manera de manejar operaciones que pueden tardar un tiempo en completarse y que no bloquean el hilo principal del programa.
+
+Las promesas se usan para ejecutar código asíncrono en JavaScript de una manera más fácil y legible. Con las promesas, podemos manejar el resultado exitoso o fallido de una tarea asíncrona sin tener que anidar varias funciones callbacks.
+
+Un ejemplo de promesa en JavaScript sería el siguiente:
+
+```javascript
+const miPromesa = new Promise((resolve, reject) => {
+  // simulamos una tarea asíncrona que tarda 2 segundos en completarse
+  setTimeout(() => {
+    const exito = true;
+    if (exito) {
+      resolve('¡La promesa se cumplió!');
+    } else {
+      reject('La promesa falló');
+    }
+  }, 2000);
+});
+
+miPromesa.then((resultado) => {
+  console.log(resultado); // Imprime "¡La promesa se cumplió!"
+}).catch((error) => {
+  console.error(error); // Imprime "La promesa falló"
+});
+
+```
+
+<!--EndFragment-->
+
+<!--StartFragment-->
+
+En el ejemplo, se crea una promesa llamada `miPromesa` que simula una tarea asíncrona que tarda dos segundos en completarse. La promesa se resuelve exitosamente y devuelve el mensaje "¡La promesa se cumplió!" utilizando la función `resolve()` si la variable `exito` es verdadera, de lo contrario, devuelve el mensaje de error "La promesa falló" utilizando la función `reject()`.
+
+Luego, se utiliza el método `then()` para manejar el resultado exitoso de la promesa y el método `catch()` para manejar el resultado fallido. En este caso, el resultado exitoso imprime en la consola el mensaje "¡La promesa se cumplió!" y el resultado fallido imprime el mensaje de error "La promesa falló".
+
+<!--EndFragment-->
+
 ## ¿Que me ofrece un observable que no una promesa?
 
 <!--StartFragment-->
