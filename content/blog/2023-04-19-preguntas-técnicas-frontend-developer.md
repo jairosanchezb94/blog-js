@@ -422,6 +422,35 @@ Estos son solo algunos de los métodos de RxJS que se utilizan comúnmente. La b
 
 ## ¿Cuando utilizar una pipe?
 
+<!--StartFragment-->
+
+Se utiliza para transformar los datos que se muestran en la vista. Las pipes son una forma de aplicar formato, filtrar o procesar datos antes de mostrarlos en la interfaz de usuario.
+
+Existen algunas situaciones en las que se recomienda utilizar una pipe en Angular:
+
+1. **Transformar datos**: Si necesitas cambiar la forma en que se muestran los datos en la vista, por ejemplo, formatear una fecha, convertir un texto a mayúsculas, aplicar una operación matemática, entre otros, entonces puedes utilizar una pipe para transformar los datos.
+2. **Filtrar datos**: Si necesitas mostrar solo un subconjunto de los datos disponibles, puedes utilizar una pipe para filtrar los datos según un criterio específico.
+3. **Ordenar datos**: Si necesitas mostrar los datos en un orden específico, puedes utilizar una pipe para ordenarlos de acuerdo a una propiedad o criterio.
+4. **Internacionalización**: Si necesitas adaptar la aplicación para diferentes culturas y regiones, puedes utilizar una pipe para aplicar formatos y estilos de acuerdo a la localización.
+
+En Angular, existen pipes predefinidas como `DatePipe`, `UpperCasePipe`, `LowerCasePipe`, `CurrencyPipe`, entre otras. También es posible crear pipes personalizadas para satisfacer necesidades específicas de la aplicación.
+
+Un ejemplo de uso de una pipe podría ser el siguiente:
+
+```phtml
+<!-- Mostrar la fecha actual en un formato personalizado -->
+<p>La fecha actual es: {{ fecha | date:'dd/MM/yyyy' }}</p>
+
+```
+
+<!--StartFragment-->
+
+En este caso, se utiliza la pipe `date` para transformar la fecha actual según el formato especificado. La pipe recibe como argumento el patrón de formato que se desea aplicar. De esta manera, se puede mostrar la fecha en un formato personalizado en la vista.
+
+<!--EndFragment-->
+
+<!--EndFragment-->
+
 ## ¿Que pasa cuando desde el html llamo a una funcion del componente para calcular algo y como afecta a todo el arbol de cambios y si esa funcion la paso a una pipe?
 
 <!--StartFragment-->
@@ -482,7 +511,6 @@ function sumar(a, b) {
 // llamar a la función con argumentos
 let resultado = sumar(2, 3);
 console.log(resultado); // Imprime 5
-
 ```
 
 <!--StartFragment-->
@@ -514,7 +542,6 @@ function imprimirResultado(resultado) {
 }
 
 sumar(2, 3, imprimirResultado); // Llama a sumar() con la función imprimirResultado como callback
-
 ```
 
 <!--StartFragment-->
@@ -555,7 +582,6 @@ miPromesa.then((resultado) => {
 }).catch((error) => {
   console.error(error); // Imprime "La promesa falló"
 });
-
 ```
 
 <!--EndFragment-->
@@ -565,6 +591,67 @@ miPromesa.then((resultado) => {
 En el ejemplo, se crea una promesa llamada `miPromesa` que simula una tarea asíncrona que tarda dos segundos en completarse. La promesa se resuelve exitosamente y devuelve el mensaje "¡La promesa se cumplió!" utilizando la función `resolve()` si la variable `exito` es verdadera, de lo contrario, devuelve el mensaje de error "La promesa falló" utilizando la función `reject()`.
 
 Luego, se utiliza el método `then()` para manejar el resultado exitoso de la promesa y el método `catch()` para manejar el resultado fallido. En este caso, el resultado exitoso imprime en la consola el mensaje "¡La promesa se cumplió!" y el resultado fallido imprime el mensaje de error "La promesa falló".
+
+<!--EndFragment-->
+
+<!--StartFragment-->
+
+## ¿Como guardar una array de objetos y como hacerlo si es array dentro de un array?
+
+<!--StartFragment-->
+
+Para guardar un array de objetos en JavaScript, simplemente se crea una variable que contenga un array y se le asigna un arreglo de objetos. Por ejemplo:
+
+<!--EndFragment-->
+
+1. ```javascript
+   let personas = [
+     { nombre: 'Juan', edad: 30 },
+     { nombre: 'María', edad: 25 },
+     { nombre: 'Pedro', edad: 40 }
+   ];
+
+   ```
+
+<!--EndFragment-->
+
+<!--StartFragment-->
+
+En este ejemplo, la variable `personas` contiene un array con tres objetos que representan a diferentes personas. Cada objeto tiene dos propiedades: `nombre` y `edad`.
+
+Si necesitas guardar un array dentro de otro array, simplemente se crea un arreglo que contenga los elementos deseados. Por ejemplo:
+
+```javascript
+let matriz = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+```
+
+<!--EndFragment-->
+
+<!--StartFragment-->
+
+En este ejemplo, la variable `matriz` contiene un array de tres elementos, cada uno de los cuales es a su vez un array de tres elementos. Cada uno de estos sub-arrays representa una fila de una matriz de tres por tres.
+
+Para acceder a los elementos de un array de objetos o de un array dentro de otro array, se utilizan índices numéricos. Por ejemplo:
+
+```javascript
+// Acceder al segundo objeto del array 'personas'
+let persona2 = personas[1];
+
+// Acceder al tercer elemento del segundo array de la matriz
+let elemento32 = matriz[1][2];
+
+```
+
+<!--EndFragment-->
+
+<!--StartFragment-->
+
+En ambos casos, se utiliza la sintaxis de corchetes para acceder al elemento deseado. En el primer caso, se accede al segundo objeto del array `personas`, que es el objeto correspondiente a la persona llamada "María". En el segundo caso, se accede al tercer elemento del segundo array de la matriz, que tiene el valor 6.
 
 <!--EndFragment-->
 
@@ -757,6 +844,77 @@ Para optimizar el uso de `useMemo`, se pueden seguir algunas prácticas recomend
    La elección de la estrategia adecuada dependerá de las necesidades y características de la aplicación. En general, es recomendable utilizar una estrategia que cargue los módulos críticos para la experiencia del usuario de manera anticipada, mientras se evita cargar excesivamente los recursos para no sobrecargar la red y los recursos del usuario.
 
 <!--StartFragment-->
+
+# R﻿esumen
+
+## A﻿ngular
+
+<!--StartFragment-->
+
+1. **¿Qué es Angular y para qué se utiliza?**
+
+   * Angular es un framework de JavaScript utilizado para desarrollar aplicaciones web y móviles. Permite crear aplicaciones de una sola página (SPA) de manera rápida y sencilla, utilizando un conjunto de herramientas y patrones de diseño predefinidos.
+2. **¿Qué es una directiva en Angular?**
+
+   * Las directivas en Angular son una forma de extender y personalizar el comportamiento de los elementos HTML en una aplicación Angular. Permiten añadir lógica de negocio a la presentación, así como modificar el DOM para mejorar la interacción del usuario.
+3. **¿Qué es un módulo en Angular?**
+
+   * Un módulo en Angular es un contenedor para diferentes componentes, servicios, directivas, etc., que se utilizan en una aplicación. Sirven para organizar y estructurar el código, y para definir las dependencias entre los diferentes elementos de la aplicación.
+4. **¿Qué es un componente en Angular?**
+
+   * Un componente en Angular es un elemento visual que representa una parte de la interfaz de usuario de una aplicación. Contiene un archivo HTML para la vista, un archivo de TypeScript para la lógica, y un archivo de CSS para los estilos.
+5. **¿Qué es una promesa en Angular?**
+
+   * Una promesa en Angular es un objeto que representa un valor que puede estar disponible de forma asíncrona en el futuro. Se utiliza para manejar tareas asíncronas, como llamadas a una API, y se puede encadenar con otras promesas para crear flujos de control complejos.
+6. **¿Qué es una pipe en Angular?**
+
+   * Una pipe en Angular es una función que se utiliza para transformar el valor de una expresión en un formato diferente para su visualización. Se utiliza para formatear cadenas de texto, fechas, números, etc.
+
+<!--EndFragment-->
+
+## R﻿eact
+
+<!--StartFragment-->
+
+1. **¿Qué es React y para qué se utiliza?**
+
+   * React es una biblioteca de JavaScript utilizada para construir interfaces de usuario. Se utiliza para crear aplicaciones web de una sola página (SPA) y aplicaciones móviles. React permite crear componentes reutilizables y manejar el estado de la aplicación de forma eficiente.
+2. **¿Qué es un componente en React?**
+
+   * Un componente en React es una pieza de código que encapsula un conjunto de funcionalidades y características de la interfaz de usuario. Los componentes se pueden reutilizar en diferentes partes de la aplicación, y se pueden componer para crear interfaces de usuario más complejas.
+3. **¿Qué es el estado en React?**
+
+   * El estado en React es un objeto que contiene datos que pueden cambiar a lo largo del tiempo en la aplicación. Se utiliza para almacenar información que puede afectar la visualización de la interfaz de usuario, y se puede actualizar mediante una función especial llamada `setState()`.
+4. **¿Qué es una prop en React?**
+
+   * Una prop en React es una forma de pasar datos de un componente padre a un componente hijo. Las props son valores que se pueden configurar en el componente padre y que se pasan como argumentos al componente hijo.
+5. **¿Qué es Redux en React?**
+
+   * Redux es una biblioteca de gestión de estado utilizada en aplicaciones React. Proporciona una forma de mantener el estado de la aplicación en un solo lugar y de manera consistente, lo que facilita el mantenimiento y la escalabilidad de la aplicación.
+
+<!--EndFragment-->
+
+## J﻿avaScript
+
+<!--StartFragment-->
+
+1. **¿Qué es JavaScript y para qué se utiliza?**
+
+   * JavaScript es un lenguaje de programación interpretado y de alto nivel utilizado para crear aplicaciones web dinámicas y animadas. Se utiliza para agregar interactividad a las páginas web, validar formularios, realizar solicitudes asincrónicas al servidor y crear efectos visuales.
+2. **¿Qué son las variables en JavaScript?**
+
+   * Las variables en JavaScript son contenedores para almacenar datos. Se pueden declarar utilizando las palabras clave `var`, `let` o `const`. Las variables `var` y `let` se pueden cambiar en cualquier momento, mientras que las variables `const` no pueden ser reasignadas.
+3. **¿Qué son las funciones en JavaScript?**
+
+   * Las funciones en JavaScript son bloques de código que realizan una tarea específica. Pueden recibir argumentos y devolver valores. Las funciones se utilizan para encapsular código, hacer que el código sea reutilizable y modular, y para evitar la repetición de código.
+4. **¿Qué son las promesas en JavaScript?**
+
+   * Las promesas en JavaScript son objetos que representan un valor que puede no estar disponible de inmediato, pero que se resolverá en el futuro. Se utilizan para manejar operaciones asincrónicas, como solicitudes a una API o la lectura de archivos.
+5. **¿Qué son las estructuras de datos en JavaScript?**
+
+   * Las estructuras de datos en JavaScript son formas de almacenar y organizar datos. Las estructuras de datos más comunes en JavaScript son los arrays y los objetos. Los arrays son listas de elementos indexados por números enteros, mientras que los objetos son colecciones de propiedades con nombres y valores asociados.
+
+<!--EndFragment-->
 
 Como se puede ver es mucha la variedad a aprender, pero como siempre digo no todo se puede saber explicar bien técnicamente, pero al menos esto sirva de conocimiento, ante cualquier pregunta tecnica.
 
