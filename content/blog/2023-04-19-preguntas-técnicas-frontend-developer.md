@@ -1015,6 +1015,19 @@ Es importante tener en cuenta los tipos de datos en JavaScript, ya que esto pued
 
 <!--EndFragment-->
 
+## ¿Cuál es la diferencia entre .call() y .apply()?
+
+<!--StartFragment-->
+
+`.call()` y `.apply()` son métodos en JavaScript que permiten llamar a una función con un objeto específico como su contexto de ejecución. La diferencia principal entre ellos es cómo se pasan los argumentos a la función:
+
+* `.call()` se utiliza para llamar a una función con una lista de argumentos separados por coma.
+* `.apply()` se utiliza para llamar a una función con una matriz de argumentos.
+
+En resumen, `.call()` y `.apply()` son métodos similares, pero `.call()` utiliza una lista separada por coma de argumentos, mientras que `.apply()` utiliza una matriz de argumentos.
+
+<!--EndFragment-->
+
 # React
 
 ## Ciclos de vida de React
