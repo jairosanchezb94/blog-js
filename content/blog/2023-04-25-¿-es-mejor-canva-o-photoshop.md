@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: ¿ Es mejor Canva o Photoshop ?
+title: ¿Es mejor Canva o Photoshop?
 date: 2023-04-25T10:06:57.474Z
 ---
 <!--StartFragment-->
