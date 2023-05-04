@@ -333,3 +333,5 @@ const userController = {
 // Vista para presentar los datos al usuario
 app.get('/users', user
 ```
+
+M﻿ás en el siguiente blog...
