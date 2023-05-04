@@ -117,19 +117,23 @@ En este ejemplo, la función "getUser" devuelve una promesa en lugar de aceptar 
 
 Un evento en Node.js es una acción que ocurre en el entorno de Node, como un clic de ratón o un cambio de estado en un servidor. Los eventos se pueden escuchar y se pueden asociar con una función de devolución de llamada para que se ejecute cuando ocurre el evento.
 
-## ¿Qué es la programación "Impulsada por eventos"? 
+## ¿Qué es la programación "Impulsada por eventos"?
 
 La programación impulsada por eventos (Event-driven programming) es un estilo de programación en el que el flujo de control del programa está determinado por los eventos que ocurren en el entorno. En Node.js, se utiliza el modelo de programación impulsada por eventos para manejar las operaciones de entrada/salida (I/O) no bloqueantes.
 
-## ¿Cuál es la diferencia entre Módulo/Dependencia/Paquete? 
+## ¿Cuál es la diferencia entre Módulo
+
+## /Dependencia
+
+## /Paquete?
 
 En Node.js, un módulo es un archivo JavaScript que contiene código que se puede reutilizar en una aplicación. Una dependencia es un módulo que una aplicación utiliza y que se ha instalado a través de un administrador de paquetes como npm. Un paquete es un conjunto de módulos que se pueden instalar y utilizar juntos, como una biblioteca.
 
-## ¿Qué es el Global Object u Objeto Global de Node? 
+## ¿Qué es el Global Object u Objeto Global de Node?
 
 El objeto global de Node.js es un objeto especial que contiene variables y funciones globales que están disponibles en todo el entorno de Node.js. Algunas de las variables y funciones globales incluyen "process", "console", "setTimeout" y "setInterval".
 
-## ¿Por qué importamos/exportamos módulos con require/module.exports y no con import de ES6? 
+## ¿Por qué importamos/exportamos módulos con require/module.exports y no con import de ES6?
 
 En Node.js, se utiliza el método de "require" y "module.exports" para importar y exportar módulos porque Node.js utiliza CommonJS, un sistema de módulos diferente al de ES6. Sin embargo, con la introducción de la versión 14 de Node.js, también se puede utilizar el sistema de módulos ES6 utilizando "import" y "export".
 
@@ -180,15 +184,15 @@ En este ejemplo, he utilizado el "events.EventEmitter" para crear un objeto de e
 
 <!--StartFragment-->
 
-## ¿Qué es el middleware en Node.js? 
+## ¿Qué es el middleware en Node.js?
 
 El middleware en Node.js es una función que procesa una solicitud HTTP antes de que se la pase a la función de devolución de llamada final. El middleware se utiliza comúnmente para agregar funcionalidades adicionales a una aplicación, como la autenticación y la validación de datos. En Express, un framework popular de Node.js, el middleware se utiliza para manejar las solicitudes HTTP.
 
-## ¿Qué son las promesas en Node.js? 
+## ¿Qué son las promesas en Node.js?
 
 Las promesas en Node.js son objetos que representan un valor que puede estar disponible en algún momento en el futuro, o que puede fallar. Las promesas se utilizan comúnmente para manejar operaciones asincrónicas en Node.js, y se pueden encadenar juntas para crear flujos de control más legibles. En lugar de utilizar el callback hell, las promesas pueden simplificar y hacer más legible el código asíncrono.
 
-## ¿Qué es el patrón de diseño de middleware "chain of responsibility" en Node.js? 
+## ¿Qué es el patrón de diseño de middleware "chain of responsibility" en Node.js?
 
 El patrón de diseño "chain of responsibility" es un patrón de diseño de middleware que se utiliza en Node.js. El patrón consiste en una serie de objetos que se encadenan juntos y que manejan una solicitud de manera incremental. Cada objeto en la cadena tiene la oportunidad de manejar la solicitud antes de pasarla al siguiente objeto en la cadena. Este patrón se utiliza comúnmente en frameworks web como Express.
 
@@ -267,7 +271,7 @@ En este ejemplo, se muestra cómo he utilizado el middleware en Express para man
 
 <!--StartFragment-->
 
-## ¿Qué es la función "async/await" en Node.js? 
+## ¿Qué es la función "async/await" en Node.js?
 
 La función "async/await" en Node.js es una forma de manejar operaciones asincrónicas de manera más legible y concisa. Se utiliza en conjunto con las promesas, y permite que el código asincrónico parezca más como código sincrónico. La palabra clave "async" se utiliza para marcar una función como asincrónica, y la palabra clave "await" se utiliza dentro de la función para esperar a que una promesa se resuelva antes de continuar con el siguiente paso.
 
@@ -297,11 +301,11 @@ readFileAsync('./archivo.txt');
 
 En este ejemplo, se utiliza la función "async/await" para leer un archivo de forma asincrónica. La palabra clave "async" se utiliza para marcar la función como asincrónica, y la palabra clave "await" se utiliza para esperar a que se resuelva la promesa devuelta por la función "readFile" del módulo "fs".
 
-## ¿Qué es la programación reactiva en Node.js? 
+## ¿Qué es la programación reactiva en Node.js?
 
 La programación reactiva en Node.js es un enfoque para manejar flujos de datos asincrónicos de manera más eficiente. Se utiliza comúnmente en aplicaciones web y móviles que requieren una gran cantidad de interacciones en tiempo real con el usuario. En lugar de manejar flujos de datos de manera secuencial, la programación reactiva permite que los flujos de datos se manejen de manera concurrente, lo que puede mejorar significativamente el rendimiento y la escalabilidad de una aplicación.
 
-## ¿Qué es el patrón de diseño "Modelo-Vista-Controlador" (MVC) en Node.js? 
+## ¿Qué es el patrón de diseño "Modelo-Vista-Controlador" (MVC) en Node.js?
 
 El patrón de diseño "Modelo-Vista-Controlador" (MVC) es un enfoque común para diseñar aplicaciones web en Node.js. El patrón separa la lógica de negocios (modelo), la presentación (vista) y el control (controlador) en componentes distintos, lo que puede mejorar la mantenibilidad y la escalabilidad de una aplicación. En este patrón, el controlador es responsable de manejar las solicitudes HTTP, el modelo es responsable de manejar la lógica de negocios y la vista es responsable de presentar los datos al usuario.
 
