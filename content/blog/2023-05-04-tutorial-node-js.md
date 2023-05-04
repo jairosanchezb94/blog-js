@@ -5,7 +5,9 @@ date: 2023-05-04T09:29:54.460Z
 ---
 <!--StartFragment-->
 
-### Este blog vamos a tratar un poco lo básico de Node.js en el cual seguiremos el tutorial de la web: https://nodeschool.io/es
+## Este blog vamos a tratar un poco lo básico de Node.js en el cual seguiremos el tutorial de la web: 
+
+###### [https://nodeschool.io/es](https://nodeschool.io/es/)
 
 <!--EndFragment-->
 
@@ -13,100 +15,123 @@ E﻿mpezamos:
 
 <!--StartFragment-->
 
-1. Fundamentos de JavaScript: Antes de aprender Node.js, es importante tener una comprensión sólida de los fundamentos de JavaScript. Esto incluye variables, operadores, tipos de datos, estructuras de control de flujo, funciones y objetos.
+**Fundamentos de JavaScript:** 
 
-   ```javascript
-   function sum(a, b) {
-     return a + b;
-   }
-   ```
-2. Introducción a Node.js: Una vez que se comprenden los fundamentos de JavaScript, es posible aprender los conceptos básicos de Node.js. Esto incluye cómo instalar Node.js, cómo ejecutar scripts Node.js, cómo usar el REPL (Read-Eval-Print-Loop) y cómo trabajar con módulos Node.js.
+Antes de aprender Node.js, es importante tener una comprensión sólida de los fundamentos de JavaScript. Esto incluye variables, operadores, tipos de datos, estructuras de control de flujo, funciones y objetos.
 
-   ```javascript
-   console.log("Hola mundo");
-   ```
-3. Trabajo con el sistema de archivos: Una vez que se comprenden los conceptos básicos de Node.js, se puede aprender cómo trabajar con el sistema de archivos en Node.js. Esto incluye cómo leer y escribir archivos, cómo crear y eliminar directorios, cómo trabajar con rutas de archivo y cómo trabajar con streams de archivos.
+```javascript
+function sum(a, b) {
+  return a + b;
+}
+```
 
-   ```javascript
-   const fs = require("fs");
+**Introducción a Node.js:** 
 
-   fs.readFile("archivo.txt", "utf8", (err, data) => {
-     if (err) throw err;
-     console.log(data);
-   });
-   ```
-4. Creación de servidores web: Uno de los principales usos de Node.js es la creación de servidores web. Se puede aprender cómo crear un servidor web básico utilizando Node.js y cómo manejar solicitudes y respuestas HTTP. También se pueden aprender conceptos más avanzados como la autenticación de usuarios y la gestión de cookies y sesiones.
+Una vez que se comprenden los fundamentos de JavaScript, es posible aprender los conceptos básicos de Node.js. Esto incluye cómo instalar Node.js, cómo ejecutar scripts Node.js, cómo usar el REPL (Read-Eval-Print-Loop) y cómo trabajar con módulos Node.js.
 
-   ```javascript
-   const http = require("http");
+```javascript
+console.log("Hola mundo");
+```
 
-   const server = http.createServer((req, res) => {
-     res.statusCode = 200;
-     res.setHeader("Content-Type", "text/plain");
-     res.end("Hola mundo");
-   });
+**Trabajo con el sistema de archivos:** 
 
-   server.listen(3000, () => {
-     console.log("Servidor en ejecución en http://localhost:3000/");
-   });
-   ```
-5. Bases de datos: Node.js se puede utilizar para trabajar con una variedad de bases de datos, incluyendo bases de datos relacionales y NoSQL. Se puede aprender cómo conectarse a una base de datos, cómo realizar consultas y cómo manejar errores.
+Una vez que se comprenden los conceptos básicos de Node.js, se puede aprender cómo trabajar con el sistema de archivos en Node.js. Esto incluye cómo leer y escribir archivos, cómo crear y eliminar directorios, cómo trabajar con rutas de archivo y cómo trabajar con streams de archivos.
 
-   ```javascript
-   const mysql = require("mysql2");
+```javascript
+const fs = require("fs");
 
-   const connection = mysql.createConnection({
-     host: "localhost",
-     user: "usuario",
-     password: "contraseña",
-     database: "basededatos",
-   });
+fs.readFile("archivo.txt", "utf8", (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+```
 
-   connection.connect((err) => {
-     if (err) throw err;
-     console.log("Conectado a la base de datos");
-     // Realizar consultas aquí
-   });
-   ```
-6. Frameworks y librerías: Node.js cuenta con una gran cantidad de frameworks y librerías que pueden facilitar el desarrollo de aplicaciones. Algunos ejemplos populares incluyen Express.js para la creación de servidores web, Socket.io para la comunicación en tiempo real y Mongoose para trabajar con bases de datos MongoDB.
+**Creación de servidores web:** 
 
-   ```javascript
-   const express = require("express");
-   const app = express();
+Uno de los principales usos de Node.js es la creación de servidores web. Se puede aprender cómo crear un servidor web básico utilizando Node.js y cómo manejar solicitudes y respuestas HTTP. También se pueden aprender conceptos más avanzados como la autenticación de usuarios y la gestión de cookies y sesiones.
 
-   app.get("/", (req, res) => {
-     res.send("Hola mundo");
-   });
+```javascript
+const http = require("http");
 
-   app.listen(3000, () => {
-     console.log("Servidor en ejecución en http://localhost:3000/");
-   });
-   ```
-7. Despliegue de aplicaciones: Una vez que se ha desarrollado una aplicación en Node.js, es necesario desplegarla en un entorno de producción. Se puede aprender cómo desplegar una aplicación en un servidor web utilizando herramientas como PM2 o Docker.
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/plain");
+  res.end("Hola mundo");
+});
 
-   ```javascript
-   pm2 start app.js
-   ```
-8. Mejoras de rendimiento y seguridad: Finalmente, se pueden aprender técnicas avanzadas para mejorar el rendimiento y la seguridad de las aplicaciones Node.js. Esto incluye el uso de técnicas de caching, la optimización del código y la implementación de medidas de seguridad para proteger las aplicaciones contra ataques.
+server.listen(3000, () => {
+  console.log("Servidor en ejecución en http://localhost:3000/");
+});
+```
 
-   ```javascript
-   const NodeCache = require("node-cache");
-   const cache = new NodeCache({ stdTTL: 60 });
+**Bases de datos:** 
 
-   function getDataFromApi() {
-     // Aquí se realizaría la consulta a la API
-   }
+Node.js se puede utilizar para trabajar con una variedad de bases de datos, incluyendo bases de datos relacionales y NoSQL. Se puede aprender cómo conectarse a una base de datos, cómo realizar consultas y cómo manejar errores.
 
-   function getData() {
-     const cachedData = cache.get("datos");
-     if (cachedData) {
-       return cachedData;
-     }
-     const newData = getDataFromApi();
-     cache.set("datos", newData);
-     return newData;
-   }
-   ```
+```javascript
+const mysql = require("mysql2");
+
+const connection = mysql.createConnection({
+  host: "localhost",
+  user: "usuario",
+  password: "contraseña",
+  database: "basededatos",
+});
+
+connection.connect((err) => {
+  if (err) throw err;
+  console.log("Conectado a la base de datos");
+  // Realizar consultas aquí
+});
+```
+
+**Frameworks y librerías:** 
+
+Node.js cuenta con una gran cantidad de frameworks y librerías que pueden facilitar el desarrollo de aplicaciones. Algunos ejemplos populares incluyen Express.js para la creación de servidores web, Socket.io para la comunicación en tiempo real y Mongoose para trabajar con bases de datos MongoDB.
+
+```javascript
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Hola mundo");
+});
+
+app.listen(3000, () => {
+  console.log("Servidor en ejecución en http://localhost:3000/");
+});
+```
+
+**Despliegue de aplicaciones:** 
+
+Una vez que se ha desarrollado una aplicación en Node.js, es necesario desplegarla en un entorno de producción. Se puede aprender cómo desplegar una aplicación en un servidor web utilizando herramientas como PM2 o Docker.
+
+```javascript
+pm2 start app.js
+```
+
+**Mejoras de rendimiento y seguridad:** 
+
+Finalmente, se pueden aprender técnicas avanzadas para mejorar el rendimiento y la seguridad de las aplicaciones Node.js. Esto incluye el uso de técnicas de caching, la optimización del código y la implementación de medidas de seguridad para proteger las aplicaciones contra ataques.
+
+```javascript
+const NodeCache = require("node-cache");
+const cache = new NodeCache({ stdTTL: 60 });
+
+function getDataFromApi() {
+  // Aquí se realizaría la consulta a la API
+}
+
+function getData() {
+  const cachedData = cache.get("datos");
+  if (cachedData) {
+    return cachedData;
+  }
+  const newData = getDataFromApi();
+  cache.set("datos", newData);
+  return newData;
+}
+```
 
 Estos son solo algunos de los pasos que se pueden seguir para aprender Node.js desde cero hasta un nivel avanzado. Para cada uno de estos pasos, hay una gran cantidad de recursos en línea que pueden proporcionar ejemplos y tutoriales detallados para ayudar a aprender Node.js de manera efectiva.
 
