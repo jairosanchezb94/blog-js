@@ -119,7 +119,7 @@ En este ejemplo, la función "getUser" devuelve una promesa en lugar de aceptar 
 4. ¿Qué es el Global Object u Objeto Global de Node? El objeto global de Node.js es un objeto especial que contiene variables y funciones globales que están disponibles en todo el entorno de Node.js. Algunas de las variables y funciones globales incluyen "process", "console", "setTimeout" y "setInterval".
 5. ¿Por qué importamos/exportamos módulos con require/module.exports y no con import de ES6? En Node.js, se utiliza el método de "require" y "module.exports" para importar y exportar módulos porque Node.js utiliza CommonJS, un sistema de módulos diferente al de ES6. Sin embargo, con la introducción de la versión 14 de Node.js, también se puede utilizar el sistema de módulos ES6 utilizando "import" y "export".
 
-A continuación, se muestro un ejemplo sencillo de cómo se utilizan estos conceptos en Node.js
+A continuación, muestro un ejemplo sencillo de cómo se utilizan estos conceptos en Node.js
 
 <!--EndFragment-->
 
@@ -170,7 +170,7 @@ En este ejemplo, he utilizado el "events.EventEmitter" para crear un objeto de e
 7. ¿Qué son las promesas en Node.js? Las promesas en Node.js son objetos que representan un valor que puede estar disponible en algún momento en el futuro, o que puede fallar. Las promesas se utilizan comúnmente para manejar operaciones asincrónicas en Node.js, y se pueden encadenar juntas para crear flujos de control más legibles. En lugar de utilizar el callback hell, las promesas pueden simplificar y hacer más legible el código asíncrono.
 8. ¿Qué es el patrón de diseño de middleware "chain of responsibility" en Node.js? El patrón de diseño "chain of responsibility" es un patrón de diseño de middleware que se utiliza en Node.js. El patrón consiste en una serie de objetos que se encadenan juntos y que manejan una solicitud de manera incremental. Cada objeto en la cadena tiene la oportunidad de manejar la solicitud antes de pasarla al siguiente objeto en la cadena. Este patrón se utiliza comúnmente en frameworks web como Express.
 
-A continuación, se muestro un ejemplo sencillo de cómo se utilizan estos conceptos en Node.js
+A continuación, muestro un ejemplo sencillo de cómo se utilizan estos conceptos en Node.js
 
 <!--EndFragment-->
 
@@ -242,3 +242,65 @@ app.use((req, res, next) => {
 En este ejemplo, se muestra cómo he utilizado el middleware en Express para manejar solicitudes HTTP. Además, se muestra cómo se utilizan las promesas para manejar operaciones asincrónicas, en este caso, leer un archivo. Por último, se muestra cómo se utiliza el patrón de diseño de middleware "chain of responsibility" en Express, para manejar las solicitudes HTTP en una serie de pasos.
 
 <!--EndFragment-->
+
+<!--StartFragment-->
+
+9. ¿Qué es la función "async/await" en Node.js? La función "async/await" en Node.js es una forma de manejar operaciones asincrónicas de manera más legible y concisa. Se utiliza en conjunto con las promesas, y permite que el código asincrónico parezca más como código sincrónico. La palabra clave "async" se utiliza para marcar una función como asincrónica, y la palabra clave "await" se utiliza dentro de la función para esperar a que una promesa se resuelva antes de continuar con el siguiente paso.
+
+   A continuación, muestro un ejemplo sencillo de cómo se utilizan estos conceptos en Node.js
+
+<!--EndFragment-->
+
+```javascript
+// Ejemplo de async/await
+const fs = require('fs');
+
+// Función asincrónica para leer un archivo
+const readFileAsync = async (filePath) => {
+  try {
+    const data = await fs.promises.readFile(filePath, 'utf-8');
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+// Uso de la función
+readFileAsync('./archivo.txt');
+```
+
+<!--StartFragment-->
+
+En este ejemplo, se utiliza la función "async/await" para leer un archivo de forma asincrónica. La palabra clave "async" se utiliza para marcar la función como asincrónica, y la palabra clave "await" se utiliza para esperar a que se resuelva la promesa devuelta por la función "readFile" del módulo "fs".
+
+10. ¿Qué es la programación reactiva en Node.js? La programación reactiva en Node.js es un enfoque para manejar flujos de datos asincrónicos de manera más eficiente. Se utiliza comúnmente en aplicaciones web y móviles que requieren una gran cantidad de interacciones en tiempo real con el usuario. En lugar de manejar flujos de datos de manera secuencial, la programación reactiva permite que los flujos de datos se manejen de manera concurrente, lo que puede mejorar significativamente el rendimiento y la escalabilidad de una aplicación.
+11. ¿Qué es el patrón de diseño "Modelo-Vista-Controlador" (MVC) en Node.js? El patrón de diseño "Modelo-Vista-Controlador" (MVC) es un enfoque común para diseñar aplicaciones web en Node.js. El patrón separa la lógica de negocios (modelo), la presentación (vista) y el control (controlador) en componentes distintos, lo que puede mejorar la mantenibilidad y la escalabilidad de una aplicación. En este patrón, el controlador es responsable de manejar las solicitudes HTTP, el modelo es responsable de manejar la lógica de negocios y la vista es responsable de presentar los datos al usuario.
+
+    A continuación, muestro un ejemplo sencillo de cómo se utilizan estos conceptos en Node.js
+
+<!--EndFragment-->
+
+```javascript
+// Ejemplo de patrón de diseño MVC
+const express = require('express');
+const app = express();
+
+// Modelo
+const users = [];
+
+// Controlador para manejar las solicitudes HTTP
+const userController = {
+  getAllUsers: (req, res) => {
+    res.send(users);
+  },
+  createUser: (req, res) => {
+    const { name, email } = req.body;
+    const user = { name, email };
+    users.push(user);
+    res.send(user);
+  },
+};
+
+// Vista para presentar los datos al usuario
+app.get('/users', user
+```
